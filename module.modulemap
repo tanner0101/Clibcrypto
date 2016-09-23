@@ -1,0 +1,5 @@
+module Clibcrypto [system] {
+  header "/usr/local/include/openssl/crypto.h"
+  link "crypto"
+  export *
+}
