@@ -1,4 +1,4 @@
-module Clibcrypto [system] {
+module ClibcryptoMac [system] {
     header "/usr/local/opt/libressl/include/openssl/crypto.h"
     header "/usr/local/opt/libressl/include/openssl/evp.h"
     header "/usr/local/opt/libressl/include/openssl/rand.h"
@@ -7,6 +7,20 @@ module Clibcrypto [system] {
     header "/usr/local/opt/libressl/include/openssl/md5.h"
     header "/usr/local/opt/libressl/include/openssl/sha.h"
     header "/usr/local/opt/libressl/include/openssl/ripemd.h"
+
+	link "crypto"
+ 	export *
+}
+
+module ClibcryptoLinux [system] {
+    header "/usr/local/include/openssl/crypto.h"
+    header "/usr/local/include/openssl/evp.h"
+    header "/usr/local/include/openssl/rand.h"
+    header "/usr/local/include/openssl/hmac.h"
+    header "/usr/local/include/openssl/md4.h"
+    header "/usr/local/include/openssl/md5.h"
+    header "/usr/local/include/openssl/sha.h"
+    header "/usr/local/include/openssl/ripemd.h"
 
 	link "crypto"
  	export *
